@@ -1,0 +1,9 @@
+{
+  'name' : 'alaycator_server',
+  'version' : '0.0.1',
+  'author' : 'Abiyasa <ilham.suhardi@gmail.com>',
+  'description' : 'a simple web-server to test alaycator',
+  'dependencies' : {
+    'express' : '2.x'
+  }
+}
