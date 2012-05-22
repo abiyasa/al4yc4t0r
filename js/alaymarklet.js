@@ -105,12 +105,6 @@ function mainAlay() {
     shortify: true 
   });
   
-  /*
-  var inputText = 'Script sederhana ini dapat digunakan untuk membuat Text ALAY yang susah diketik oleh manusia biasa. Masukkan teks normal yang ingin dibuat menjadi ALAY Text';
-  var outputText = alaycator.convert(inputText);  
-  console.log('[' + outputText + ']');
-  */
-  
   (function goAlay(node) {
     if (node) {
       node = node.firstChild;
