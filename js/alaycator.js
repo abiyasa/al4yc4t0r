@@ -97,3 +97,34 @@ AlayCator.prototype.convert = function(inputText) {
 
   return resultText;
 };
+
+function mainAlay() {
+  var alaycator = new AlayCator();
+  alaycator.init({
+    useMixedCase : false,     
+    shortify: true 
+  });
+  
+  (function goAlay(node) {
+    if (node) {
+      node = node.firstChild;
+      while (node !== null) {
+        if (node.nodeType === 3) {
+          // Text node
+          node.textContent = alaycator.convert(node.textContent);          
+        } else if (node.nodeType === 1) {
+          goAlay(node);
+        }
+        
+        node = node.nextSibling;
+      }
+    }
+  })(document.body);
+  
+}
+
+window.onload = window.letsgoAlay = mainAlay();
+
+if (!window.letsgoAlay) {
+  mainAlay();
+}
